@@ -9,7 +9,7 @@ import Chat from "./pages/Chat";
 import { userAuth } from "./context/AuthContext";
 
 function App() {
-  console.log(userAuth().isLoggedIn);
+  console.log(userAuth()?.isLoggedIn);
 
   return (
     <main>

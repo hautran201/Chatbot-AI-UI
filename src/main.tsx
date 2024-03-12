@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+
+import "./index.css";
+import App from "./App.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
 
 const theme = createTheme({
@@ -18,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <AuthProvider>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
+          <Toaster position="top-right" />
           <App />
         </ThemeProvider>
       </BrowserRouter>
